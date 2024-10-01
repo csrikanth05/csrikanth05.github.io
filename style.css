@@ -1,7 +1,9 @@
+/* Global styles */
 body {
     background-color: black;
-    color: green;
+    color: #00FF00; /* Bright DOS-like green */
     font-family: 'Courier New', monospace;
+    font-size: 18px;
     margin: 0;
     padding: 20px;
 }
@@ -11,18 +13,52 @@ body {
     margin: auto;
 }
 
-.title {
-    text-align: center;
-    font-size: 2em;
+/* Styling the title and prompt text */
+#boot-text {
+    font-weight: bold;
+}
+
+#prompt-text {
+    font-weight: bold;
 }
 
 .typed-text {
     white-space: pre; /* To preserve spacing */
-    display: inline-block; /* Allow typed effect */
+    display: inline-block; /* For typed effect */
     opacity: 0; /* Start hidden */
 }
 
-a {
-    color: green;
-    text-decoration: none;
+.typed-dots {
+    font-weight: bold;
+    display: inline-block;
+    opacity: 0;
 }
+
+/* Styling links for the menu */
+a {
+    color: #00FF00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust the thickness of the text */
+p, a {
+    letter-spacing: 0.1em;
+}
+/* Blinking cursor */
+.cursor {
+    font-weight: bold;
+    opacity: 1;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
