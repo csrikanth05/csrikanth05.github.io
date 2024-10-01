@@ -4,31 +4,36 @@ body {
     color: green;
     font-family: 'Courier New', monospace;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-/* Wrapper to hold both panels */
-.wrapper {
+/* Container to hold both panels */
+.container {
     display: flex;
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
+    height: 80vh; /* Full screen height for terminal effect */
+    border: 1px solid green;
 }
 
-/* Left terminal panel */
-.left-panel {
-    width: 50%;
-    padding-right: 20px;
-    border-right: 1px solid green;
+/* Terminal panel (left side) */
+.terminal-panel {
+    width: 50%; /* Half width for the left panel */
+    padding: 20px;
+    border-right: 1px solid green; /* Divide the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .typed-text {
     white-space: pre; /* To preserve spacing */
-    display: inline-block; /* Allow typed effect */
-    opacity: 0; /* Start hidden */
+    display: inline-block;
+    opacity: 0; /* Start hidden for typed effect */
     font-size: 0.85em; /* Reduced font size */
     text-align: left;
 }
@@ -46,19 +51,19 @@ body {
     }
 }
 
-/* Right panel with menu */
-.right-panel {
-    width: 50%;
-    padding-left: 20px;
+/* Menu panel (right side) */
+.menu-panel {
+    width: 50%; /* Half width for the right panel */
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .menu-title {
     font-size: 1.5em;
     color: green;
-    text-align: left;
 }
 
 .menu {
@@ -76,7 +81,6 @@ body {
     text-decoration: none;
 }
 
-/* Menu hover effect */
 .menu li a:hover {
     text-decoration: underline;
 }
