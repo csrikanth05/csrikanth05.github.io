@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const dots = document.getElementById('dots');
     const promptText = document.getElementById('prompt-text');
     const descText = document.getElementById('desc-text');
-    const menuText = document.getElementById('menu-text');
     const cursor = document.getElementById('cursor');
 
     let delay = 500;
@@ -25,10 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Show description text after another second
                 setTimeout(() => {
                     descText.style.opacity = 1;
-                    // Show menu after description appears
-                    setTimeout(() => {
-                        menuText.style.opacity = 1;
-                    }, delay);
                 }, delay);
             }, delay);
         }, 3000); // Total 3 seconds for the boot dots animation
