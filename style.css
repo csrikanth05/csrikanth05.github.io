@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    color: green;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 2em;
+}
+
+.typed-text {
+    white-space: pre; /* To preserve spacing */
+    display: inline-block; /* Allow typed effect */
+    opacity: 0; /* Start hidden */
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
